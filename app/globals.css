@@ -2,32 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.slick-list {
+  padding: 0 0 0 0px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.slick-arrow.slick-next {
+  top: -48%;
+  right: 67%;
+  visibility:hidden !important;
+}
+.slick-arrow.slick-prev {
+  top: -48%;
+  left: 30%;
+  visibility:hidden !important;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+  .slick-track .slick-slide {
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slick-track .slick-slide {
+    padding-right: 20px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media screen and (max-width: 1500px) {
+  /* client slider */
+#client-slider .slick-track .slick-slide {
+  padding: 0 10px !important;
+}
+}
+@media screen and (max-width: 600px) {
+  /* client slider */
+#client-slider .slick-track .slick-slide {
+  padding: 0 0 !important;
+}
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+
+/* client slider */
+#client-slider .slick-track .slick-slide {padding: 0 38px;}
